@@ -1,0 +1,1 @@
+let titulo = document.querySelector('h1'); //variable de tipo complejo
