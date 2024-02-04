@@ -2,8 +2,14 @@
 function encriptarTexto(){
 
     //ToLowerCase convierte la entrada en caracteres en minúscula.
-    let txtLimpio = document.getElementById("entradaTexto").value.toLowerCase();
-    console.log(txtLimpio); //Comprobación de la asignación
+    let txtLimpio = document.getElementById("entradaTexto").value;
+    
+    //comprobar la entrada de texto con mayùsculas
+    if (identificarMayus(txtLimpio)){
+        console.log("La entrada tiene mayúsculas.");
+    } else {
+        console.log("La entrada no tiene mayúsculas.");
+    }
 
     //Reemplazar los valores de las vocales del mensaje ingresado
     let textoEncriptado = txtLimpio.replace(/e/img, "enter");
@@ -18,7 +24,14 @@ function encriptarTexto(){
 
 //Función para desencriptar
 function desencriptarTexto(){
-    let txtEncriptado = document.getElementById("entradaTexto").value.toLowerCase(); 
+    let txtEncriptado = document.getElementById("entradaTexto").value; 
+
+    //comprobar la entrada de texto con mayùsculas
+    if (identificarMayus(txtEncriptado)){
+        console.log("La entrada tiene mayúsculas.");
+    } else {
+        console.log("La entrada no tiene mayúsculas.");
+    }
 
     let textoDesencriptado = txtEncriptado.replace(/enter/img, "e");
     textoDesencriptado = textoDesencriptado.replace(/imes/img, "i");
@@ -31,9 +44,7 @@ function desencriptarTexto(){
 }
 
 
-//Funciòn para identificar mayùsculas en la entrada del teclado al momento de invocar el evento de alguno de los botones
-function identificarMayus(){
-    
-
-
+//Funciòn para identificar mayùsculas en la entrada
+function identificarMayus(entrada){
+    return /[A-Z]/.test(entrada); //devuelve T o F dependiendo de si encuentra mayùsculas
 }
