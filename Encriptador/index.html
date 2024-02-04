@@ -1,0 +1,48 @@
+<!--Metztli Huertero Granada-->
+<!--Challenge Alura 01: Encriptador de texto-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="script.js"></script>    
+    <title>Encriptador de texto</title>
+</head>
+
+<body>
+    <header> <!--logo del programa-->
+        
+    </header>
+
+    <div id="divEntrada">  <!--Ingresar el texto-->
+        <input type="text" id="entradaTexto">
+        <button id="btnEncriptar">Encriptar</button>
+        <button id="btnDesencriptar">Desencriptar</button>
+    </div>
+
+    <div id="divSalida"> <!--Imprimir el texto-->
+        <textarea name="textarea" rows="10" cols="50" id="salidaTexto"></textarea>
+        <button id="btnCopiar">Copiar</button>
+    </div>
+
+    <footer>
+        <!--Datos personales-->
+        <p>Metztli Huertero Granada</p>
+    </footer>
+
+</body>
+
+<script>
+    //Asignar evento al boton de Encriptar
+    let btnEncrip = document.querySelector("#btnEncriptar");
+    btnEncrip.onclick = encriptarTexto;
+
+    //Asignación de evento al boton de desencriptar
+    let btnDesencrip = document.querySelector("#btnDesencriptar");
+    btnDesencrip.onclick = desencriptarTexto;
+
+</script>
+
+</html>
