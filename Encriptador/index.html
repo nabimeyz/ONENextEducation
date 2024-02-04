@@ -13,19 +13,49 @@
 
 <body>
     <header> <!--logo del programa-->
-        
+        <img src="/Encriptador/img/Logo.png" alt="Logo alura">
     </header>
 
-    <div id="divEntrada">  <!--Ingresar el texto-->
-        <input type="text" id="entradaTexto">
-        <button id="btnEncriptar">Encriptar</button>
-        <button id="btnDesencriptar">Desencriptar</button>
-    </div>
+    <section id="seccionEntrada"> <!--Seccion de elementos principales-->
+        <div id="divEntrada">  <!--Ingresar el texto-->
+            <input type="text" placeholder="Ingresa el texto aqui" id="entradaTexto">
+        </div>
 
-    <div id="divSalida"> <!--Imprimir el texto-->
-        <textarea name="textarea" rows="10" cols="50" id="salidaTexto"></textarea>
-        <button id="btnCopiar">Copiar</button>
-    </div>
+        <div id="divMinusculas"> <!--Advertencia de uso de minusculas-->
+            <img src="/Encriptador/img/exclamacion.png" alt="signo de exclamacion">
+            <p>Sólo minúsculas y sin acentos</p>
+        </div>
+
+        <div id="divBotones"> <!--Contenedor de botones-->
+            <button id="btnEncriptar">Encriptar</button>
+            <button id="btnDesencriptar">Desencriptar</button>
+        </div>
+    </section>
+
+
+    <section id="seccionSalida"> <!--sección para imprimir y copiar texto-->
+
+        <div id="divLupa"> <!--Contenedor de imagen principal de la pagina-->
+            <img src="/Encriptador/img/Muñeco.png" alt="Muñeco que busca algo">
+        </div>
+
+        <div id="divEspera"> <!--Contenedor con mensaje de espera-->
+            <p id="m1">Ningun mensaje fue encontrado</p>
+            <p id="s1">Ingrese el texto que desees encriptar o desencriptar.</p>
+        </div>
+
+        <div id="divSalida"> <!--Imprimir el texto-->
+            <textarea name="textarea" rows="10" cols="50" id="salidaTexto"></textarea>
+            
+        </div>
+
+        <div id="divCopiar"> <!--Contenedor del botón de copiar-->
+            <button id="btnCopiar">Copiar</button>
+        </div>
+    </section>
+    
+
+    
 
     <footer>
         <!--Datos personales-->
