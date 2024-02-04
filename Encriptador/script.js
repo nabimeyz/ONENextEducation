@@ -7,6 +7,7 @@ function encriptarTexto(){
     //comprobar la entrada de texto con mayùsculas
     if (identificarMayus(txtLimpio)){
         console.log("La entrada tiene mayúsculas.");
+        return;
     } else {
         console.log("La entrada no tiene mayúsculas.");
     }
@@ -29,6 +30,7 @@ function desencriptarTexto(){
     //comprobar la entrada de texto con mayùsculas
     if (identificarMayus(txtEncriptado)){
         console.log("La entrada tiene mayúsculas.");
+        return;
     } else {
         console.log("La entrada no tiene mayúsculas.");
     }
@@ -43,8 +45,15 @@ function desencriptarTexto(){
     document.getElementById("salidaTexto").innerHTML = textoDesencriptado;
 }
 
-
 //Funciòn para identificar mayùsculas en la entrada
 function identificarMayus(entrada){
     return /[A-Z]/.test(entrada); //devuelve T o F dependiendo de si encuentra mayùsculas
+}
+
+//Funciòn para copiar el texto que se encripta/desencripta
+function copiarTexto (){
+    let contCopiar = document.querySelector("#salidaTexto");
+    contCopiar.select();
+    document.execCommand("copy");
+    console.log("texto copiado.");
 }
