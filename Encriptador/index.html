@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>    
     <title>Encriptador de texto</title>
 </head>
@@ -40,13 +40,12 @@
         </div>
 
         <div id="divEspera"> <!--Contenedor con mensaje de espera-->
-            <p id="m1">Ningun mensaje fue encontrado</p>
-            <p id="s1">Ingrese el texto que desees encriptar o desencriptar.</p>
+            <h3>Ningun mensaje fue encontrado</h3>
+            <p id="msj1">Ingrese el texto que desees encriptar o desencriptar.</p>
         </div>
 
         <div id="divSalida"> <!--Imprimir el texto-->
-            <textarea name="textarea" rows="10" cols="50" id="salidaTexto"></textarea>
-            
+            <p id="salidaTexto"></p> <!--Párrafo vacío para imprimir texto encriptado/ desencriptado-->
         </div>
 
         <div id="divCopiar"> <!--Contenedor del botón de copiar-->
@@ -76,7 +75,6 @@
     //Asignación de evento al boton de desencriptar
     let btnCopia = document.querySelector("#btnCopiar");
     btnCopia.onclick = copiarTexto;
-
 </script>
 
 </html>
