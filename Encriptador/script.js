@@ -50,10 +50,15 @@ function identificarMayus(entrada){
     return /[A-Z]/.test(entrada); //devuelve T o F dependiendo de si encuentra mayùsculas
 }
 
-//Funciòn para copiar el texto que se encripta/desencripta
+//Funciòn para copiar el texto que se encripta/desencripta, reemplazando comando obsoleto exec.command
 function copiarTexto (){
-    let contCopiar = document.querySelector("#salidaTexto");
-    contCopiar.select();
-    document.execCommand("copy");
-    console.log("texto copiado.");
+    let textoACopiar = document.getElementById("salidaTexto").innerText;
+
+    navigator.clipboard.writeText(textoACopiar)
+        .then(() => {
+            console.log("Texto copiado al portapapeles.");
+        })
+        .catch(err => {
+            console.error('Error al intentar copiar el texto: ', err);
+        });
 }
