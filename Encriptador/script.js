@@ -6,7 +6,7 @@ function encriptarTexto(){
     
     //comprobar la entrada de texto con mayùsculas
     if (identificarMayus(txtLimpio)){
-        console.log("La entrada tiene mayúsculas.");
+        alert("La entrada tiene mayúsculas. Recuerde que el mensaje a encriptar sólo debe ser escrito en minúsculas y sin acentos");
         return;
     } else {
         console.log("La entrada no tiene mayúsculas.");
@@ -31,7 +31,7 @@ function desencriptarTexto(){
 
     //comprobar la entrada de texto con mayùsculas
     if (identificarMayus(txtEncriptado)){
-        console.log("La entrada tiene mayúsculas.");
+        alert("La entrada tiene mayúsculas. Recuerde que el mensaje a encriptar sólo debe ser escrito en minúsculas y sin acentos");
         return;
     } else {
         console.log("La entrada no tiene mayúsculas.");
