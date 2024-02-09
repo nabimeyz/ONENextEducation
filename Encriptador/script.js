@@ -19,6 +19,8 @@ function encriptarTexto(){
     textoEncriptado = textoEncriptado.replace(/o/img, "ober");
     textoEncriptado = textoEncriptado.replace(/u/img, "ufat");
 
+    //Ocultar el contenido para imprimir en un espacio libre
+    ocultarCont();
     //Imprimir el mensaje en el espacio de salida de Texto
     document.getElementById("salidaTexto").innerHTML = textoEncriptado;
 }
@@ -41,6 +43,8 @@ function desencriptarTexto(){
     textoDesencriptado = textoDesencriptado.replace(/ober/img, "o");
     textoDesencriptado = textoDesencriptado.replace(/ufat/img, "u");
 
+    //Ocultar el contenido para imprimir en un espacio libre
+    ocultarCont();
     //Imprimir el mensaje en el espacio de salida de Texto
     document.getElementById("salidaTexto").innerHTML = textoDesencriptado;
 }
@@ -62,3 +66,12 @@ function copiarTexto (){
             console.error('Error al intentar copiar el texto: ', err);
         });
 }
+
+//Función para ocultar el aviso de "no texto" cuando se encripte/desencripte
+function ocultarCont(){
+    let muneco = document.getElementById("divLupa");
+    let anuncioMsj = document.getElementById("divEspera");
+
+    muneco.classList.add("ocultar");
+    anuncioMsj.classList.add("ocultar");
+} 
