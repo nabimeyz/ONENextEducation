@@ -6,11 +6,13 @@
 
 body {
     background-color: #f4f4fc;
+    padding-left: 40px;
 }
 
 header {
     width: 100%;
     height: 90px;
+    padding-top: 15px;
 }
 
 #logo {
@@ -26,6 +28,7 @@ main {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 #seccionEntrada {
@@ -55,7 +58,7 @@ main {
 #divMinusculas {
     position: absolute;
     top: 670px;
-    left: 370px;
+    left: 160px;
     display: flex;
     color: #495057;
 }
